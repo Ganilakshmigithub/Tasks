@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 public class Calculator {
 
@@ -67,9 +68,14 @@ public class Calculator {
     }
 }
 System.out.println("Good Bye!");
-
     
-
-        scanner.close();
+List<Integer> numbers=List.of(1,2,3,4,5);
+printList(numbers);
     }
+
+    public static void printList(List<Integer> numbers){
+        for (Integer number : numbers) {
+            System.out.println(number);
+    }
+}
 }
