@@ -62,7 +62,7 @@ public class Calculator {
     System.out.println("Do you want to continue? (yes/no)");
     scanner.nextLine(); 
     String input = scanner.nextLine().trim().toLowerCase();
-    if (input.equals("n") || input.equals("no")) {
+    if (input.equals("n") || input.equals("no" )|| input.equals("n o")) {
         iscontinue = false;
     }
 }
