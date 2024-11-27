@@ -15,7 +15,7 @@ public class Number implements Comparable<Number> {
 
     }
 }
- class Main {
+class Main {
     public static void main(String[] args) {
         List<Number> numbers=List.of(
         new Number(20),
