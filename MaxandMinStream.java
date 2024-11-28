@@ -7,8 +7,6 @@ public class MaxandMinStream {
         int min=numbers.stream().min(Integer::compare).get();
         System.out.println("Max number is "+max);
         System.out.println("min number is "+min);
-
-                        
         
     }
 }
