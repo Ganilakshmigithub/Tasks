@@ -6,8 +6,8 @@ import java.util.List;
 public class MergeArray3 {
 
     public static void main(String[] args) {
-        int[] arr1 = {1,2, 3, 5, 7, 9,22,12};
-        int[] arr2 = {2, 4,9, 8, 10,32,12};
+        int[] arr1 = {1,2,9,3, 5, 7, 9,22,12,2};
+        int[] arr2 = {2, 4,9,8, 10,32,12};
         HashSet<Integer> set = new HashSet<>();
         List<Integer> duplicate=new ArrayList<>();
         for(int i : arr1) {
@@ -23,6 +23,8 @@ public class MergeArray3 {
                 List<Integer> list=new ArrayList<>(set);
                 Collections.sort(list);
                 System.out.println(list);
-                System.out.println(duplicate);
+                HashSet<Integer> finalist=new HashSet<>(duplicate);
+                System.out.println("duplicates without repition: "+finalist);
+
     }
 }
