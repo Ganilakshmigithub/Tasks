@@ -1,4 +1,4 @@
-//enhance for loop
+//while loop
 
 import java.util.Arrays;
 
