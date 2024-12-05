@@ -1,19 +1,32 @@
-import java.util.stream.Collectors;
-//hasmap
+import java.util.HashMap;
+import java.util.Map;
 
 public class DuplicateCharacters {
 
     public static void main(String[] args) {
         String str = "ganilakshmi";
 
-        String duplicates = str.chars() //convert string to stream of characters ascii
-                .mapToObj(c -> (char) c) //convert int to char
-                .collect(Collectors.groupingBy(c -> c, Collectors.counting())) //creates map of character and its frequency..character(key)
-                .entrySet().stream()  //creates stream
-                .filter(e -> e.getValue() > 1) //extracts count of character greater than 1
-                .map(e -> e.getKey().toString()) //converts entry to string
-                .collect(Collectors.joining()); //combines into string
+        char [] charArray = str.toCharArray();
+        HashMap<Character,Integer> map = new HashMap<>();
+        for (char c : charArray) {
+                if(map.containsKey(c)){
+                        map.put(c,map.get(c)+1);
+                        }
+                        else
+                        {
+                                map.put(c,1);
+                                }
 
-        System.out.println("Duplicate characters: " + duplicates);
+    }
+    for (Map.Entry<Character, Integer> entry :
+             map.entrySet()) {
+ 
+            if (entry.getValue() > 1) {
+                System.out.println("character "+entry.getKey()
+                                   + " : "
+                                   + "its count "+entry.getValue());
+            }
+        }
     }
 }
+
